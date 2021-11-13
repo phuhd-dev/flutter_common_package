@@ -80,7 +80,7 @@ class _MultipleValueLinearProgressIndicatorPainter extends CustomPainter {
       total += element.value;
     }
 
-    if (containsNegativeValue) return;
+    if (containsNegativeValue || total <= 0) return;
 
     var currentPositionX = 0.0;
     for (var element in values) {
